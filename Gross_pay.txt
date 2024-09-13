@@ -1,0 +1,34 @@
+Assignment-1: 
+
+Outline:
+Need 3 variables payRate, hoursWorked, grossPay
+Assign values to payRate and hoursWorked
+Calculate grossPay
+Print grossPay
+
+Logic:
+Need double variables: payRate, hoursWorked, grossPay
+Assign values to payRate and hoursWorked
+     payRate = 15.00;
+     hoursWorked = 40.00;
+Calculate grossPay
+    grossPay = payRate * hoursWorked;
+Print grossPay
+
+Code:
+#include <iostream>
+using namespace std;
+int main(){
+//Declaration
+ double grossPay, payRate, hoursWorked;
+//Initialization
+ payRate = 15.00;
+ hoursWorked= 40.00;
+ grossPay = payRate * hoursWorked;
+//Output
+ cout << "The gross pay is: $" << grossPay << endl;
+ return 0;
+}
+
+
+
