@@ -1,0 +1,123 @@
+Question:
+
+Write a simple calculator program.
+Your program runs once and then exits.
+Perform Add, Subtract, Multiply, and Divide.
+You should check for Division by Zero if Divide.
+Print out a menu that prompts the user to make a choice.
+Ask the user to enter two numbers.
+Determine the operation selected using an IF statement.
+Perform the calculation.
+Output the result.
+In a Word document, write out your Outline and Logic sections and upload that document along with your main.cpp file or you can paste your C++ code in your Word document under " Code"
+
+
+
+Outline:
+
+1) Need 7 variables
+2) Will ask the user to choose an option and give input from 4 options: Addition, Subtraction, Multiplication and Division
+3) Then ask the user to input two numbers
+4) If they choose option 1 , addition takes place
+5) If they choose option 2,  subtraction takes place
+6) If they choose option 3 ,  multiplication takes place
+7) If they choose option 4 , then checks for denominator. If num2 i.e denominator is 0, then prints division by 0. Else division takes place.
+
+
+Logic:
+
+1) float add, subtract, multiply, divide;
+2) float num1, num2;
+3) int opt;
+4) Ask the user to choose and program takes input, opt, from 4 options: Addition, Subtraction, Multiplication, Division
+5) Then ask the user to input two numbers num1 and num2
+6) If user choose an option from these four options, they can make operation
+otherwise program stops and asks user to give input again from 0 to 4 
+7) If they choose option 1 , that is opt==1, addition takes place, add = num1+num2
+8) If they choose option 2, that is opt==2, subtraction takes place, subtract = abs(num1) - abs(num2)
+9) If they choose option 3 , that is opt==3, multiplication takes place, multiply = num1 * num2
+10) If they choose option 4 , that is opt==4, then checks for denominator. If num2 i.e denominator is 0, then prints division by 0. Else division takes place, divide = num1/num2
+
+
+Code:
+
+#include <stdio.h>
+
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+    float add, subtract, multiply, divide;
+    float num1, num2;
+    
+    int opt;
+    
+    while(true){
+    cout << "Welcome to the Calculator program" << endl;
+    cout << "Select one option from the list below:\n" ;
+    cout << "1 Addition\n";
+    cout << "2 Subtraction\n";
+    cout << "3 Multiplication\n";
+    cout << "4 Division\n";
+    cout << "Enter your option for operation:\n";
+    cin >> opt;
+    
+    
+    if (opt == 1 || opt == 2 || opt == 3 || opt == 4 ){
+        
+    cout << "Enter first number:\n";
+    cin >> num1;
+    cout << "Enter second number:\n";
+    cin >> num2;
+    
+    
+    if (opt == 1){
+        add = num1 + num2;
+        cout << "The result is :" << add << endl;
+    }
+    
+    else if ( opt == 2){
+        subtract = abs(num1) - abs(num2);
+        cout << "The result is :" << subtract << endl;
+        
+    }
+    else if (opt == 3){
+        multiply = num1 * num2;
+        cout << "The result is :" << multiply << endl;
+    }
+    
+    else if (opt == 4){
+        
+        if (num2 == 0 ){
+            cout << "Division by 0" << endl;
+            
+        }
+        else {
+            divide = num1/num2;
+            cout << "The result is : " << divide << endl;
+        }
+        
+     }
+     
+      break;
+    
+}
+    
+    else {
+        cout << "Please give an option from 1 to 4 \n";
+        
+    }
+    
+
+}
+
+    return 0;
+}
+
+
+
+
+
+
